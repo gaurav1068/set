@@ -1,5 +1,6 @@
 package set
 
+// Set set implementation using go
 type Set struct {
 	elements []int
 }
@@ -13,6 +14,12 @@ func valueInSlice(a int, list []int) bool {
 	return false
 }
 
+// GetElements get all elements of set
+func (s *Set) GetElements() []int {
+	return s.elements
+}
+
+// Add add element in set
 func (s *Set) Add(i ...int) {
 	for _, val := range i {
 		if !valueInSlice(val, s.elements) {
@@ -21,6 +28,7 @@ func (s *Set) Add(i ...int) {
 	}
 }
 
+// Union get union of sets
 func (s *Set) Union(s1 *Set) *Set {
 	s2 := NewSet()
 	for _, val := range s.elements {
@@ -32,6 +40,7 @@ func (s *Set) Union(s1 *Set) *Set {
 	return s2
 }
 
+// Intersect get intersection of set
 func (s *Set) Intersect(s1 *Set) *Set {
 	s2 := NewSet()
 	for _, val := range s.elements {
@@ -44,6 +53,7 @@ func (s *Set) Intersect(s1 *Set) *Set {
 	return s2
 }
 
+// Difference get difference of set
 func (s *Set) Difference(s1 *Set) *Set {
 	s2 := NewSet()
 	for _, val := range s.elements {
@@ -60,6 +70,7 @@ func (s *Set) Difference(s1 *Set) *Set {
 	return s2
 }
 
+// NewSet get new set
 func NewSet() *Set {
 	s := &Set{}
 	return s
