@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package set
 
 type Set struct {
 	elements []int
@@ -65,22 +63,4 @@ func (s *Set) Difference(s1 *Set) *Set {
 func NewSet() *Set {
 	s := &Set{}
 	return s
-}
-
-func main() {
-	s := NewSet()
-	s.Add(1, 2, 3)
-	s.Add(5, 6)
-	s.Add(5)
-	s.Add(1)
-
-	s1 := NewSet()
-	s1.Add(1, 2, 3, 4)
-
-	fmt.Println(s.elements)
-	fmt.Println(s1.elements)
-	fmt.Println(s.Union(s1).elements)
-	fmt.Println(s.Intersect(s1).elements)
-	fmt.Println(s.Difference(s1).elements)
-	fmt.Println(s1.Difference(s).elements)
 }
