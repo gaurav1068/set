@@ -1,0 +1,6 @@
+* Exercise 6
+- Write an implementation of a set
+- Build a module of your set implentation and push to github
+- Create a small program to use your new module
+- Your set should support union, intersection, difference, no duplicates
+- additionally, make a module of your custom logger and use it in this solution
