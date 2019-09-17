@@ -1,3 +1,3 @@
-module "https://github.com/gaurav1068/set"
+module github.com/gaurav1068/set
 
 go 1.12
