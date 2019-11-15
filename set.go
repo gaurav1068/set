@@ -14,11 +14,6 @@ func valueInSlice(a int, list []int) bool {
 	return false
 }
 
-// GetElements get all elements of set
-func (s *Set) GetElements() []int {
-	return s.elements
-}
-
 // Add add element in set
 func (s *Set) Add(i ...int) {
 	for _, val := range i {
@@ -26,6 +21,11 @@ func (s *Set) Add(i ...int) {
 			s.elements = append(s.elements, val)
 		}
 	}
+}
+
+// GetElements get all elements of set
+func (s *Set) GetElements() []int {
+	return s.elements
 }
 
 // Union get union of sets
